@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Rammetto+One&family=Bungee+Hairline&family=Nixie+One&family=Chango&family=Hepta+Slab:wght@200;500;800&family=Ribeye&family=Modak&family=Luckiest+Guy&family=Inika&family=Oldenburg&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2 {
+  //   font-family: "Luckiest Guy";
+  font-size: 300%;
+  font-weight: 900;
+  padding-top: 0px;
+}
+h3 {
+  font-size: 200%;
+  font-weight: 900;
+  padding-top: 0px;
+}
+.profileText p {
+  font-size: 150%;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+.imageBox img {
+  padding: 15%;
+  border-radius: 50%;
+}
+
+body {
+  min-width: fit-content;
+  background-color: #eaf4f4;
+  font-family: "Hepta Slab", cursive;
+  font-size: 150%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: underline;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  //   max-height: 1000px;
+  //   min-height: 1000px;
+  //   margin: 50px;
+  display: grid;
+  //   grid-template-columns: 1fr 2fr;
+}
+.boxShadow {
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+.grid1vs2 {
+  grid-template-columns: 1fr 2fr;
+}
+.grid1vs1 {
+  grid-template-columns: 1fr 1fr;
+}
+.container .leftSide {
+  position: relative;
+  background-color: #1b4965;
+  color: #eaf4f4;
+  padding: 0;
+  margin: 0;
+}
+
+.container .leftSide .block {
+  padding: 10%;
+  color: #bee9e8;
+  font-weight: 200;
+  //   width: 80%;
+  padding: 0 0 5% 0%;
+  margin: 0 10% 5% 10%;
+  text-align: center;
+  //   margin-top: -10%;
+  padding-bottom: 50px;
+}
+
+.container .leftSide .block .ending {
+  margin: 5% 30%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileText .name {
+  margin-top: -15%;
+}
+.block .contact {
+  align-items: center;
+}
+
+p,
+span,
+tr,
+th {
+  font-weight: 500;
+  font-size: 120%;
+  padding: 0 20px 0 0;
+}
+
+.block .contact th {
+  padding: 0 20px 0 0;
+}
+.block .contact .left {
+  text-align: right;
+}
+.block .contact .right {
+  text-align: left;
+}
+.container .rightSide {
+  position: relative;
+  padding: 10px;
+}
