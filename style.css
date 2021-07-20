@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  /* -webkit-box-sizing: border-box;
+  box-sizing: border-box; */
 }
 
 h1,
 h2 {
-  font-size: 300%;
+  font-size: 250%;
   font-weight: 900;
   padding-top: 0px;
 }
@@ -19,32 +19,22 @@ h3 {
 }
 
 .profileText p {
-  font-size: 150%;
+  /* font-size: 120%; */
   font-weight: 500;
   padding: 0;
   margin: 0;
 }
 
 .imageBox img {
-  padding: 15%;
+  padding: 10%;
   border-radius: 50%;
 }
 
 body {
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
   background-color: #eaf4f4;
   font-family: "Hepta Slab", cursive;
-  font-size: 150%;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-size: 11px;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -52,49 +42,65 @@ a {
   text-decoration: underline;
 }
 
+.iconGreenLight {
+  color: rgb(65, 204, 107);
+}
+.bgGreen {
+  background-color: rgba(49, 126, 72, 1);
+}
+.iconWhite {
+  color: #fff;
+}
+.iconBlueLight {
+  color: rgba(0, 129, 167, 0.7);
+}
+.bgBlue {
+  background-color: rgba(0, 109, 119, 0.7);
+}
 .center {
   margin-left: auto;
   margin-right: auto;
 }
 
-.container {
-  position: relative;
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
+.border {
+  border: 1px solid;
 }
 
-.boxShadow {
-  -webkit-box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+@media (min-width: 380px) {
+  .container {
+    position: relative;
+    max-width: 100%;
+    /* display: -ms-grid; */
+    display: grid;
+  }
 }
 
 .grid1vs2 {
-  -ms-grid-columns: 1fr 2fr;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30% auto;
 }
 
 .grid1vs1 {
   -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
 }
 
 .container .leftSide {
   position: relative;
   background-color: #1b4965;
   color: #eaf4f4;
+  /* font-size: 120%; */
   padding: 0;
-  margin: 0;
+  margin: 5%;
 }
 
 .container .leftSide .block {
-  padding: 10%;
+  /* padding: 10%; */
   color: #bee9e8;
   font-weight: 200;
   padding: 0 0 5% 0%;
-  margin: 0 10% 5% 10%;
+  margin: 0 5%;
   text-align: center;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 .container .leftSide .block .ending {
@@ -103,7 +109,7 @@ a {
 }
 
 .profileText .name {
-  margin-top: -15%;
+  margin-top: -8%;
 }
 
 .block .contact {
@@ -117,24 +123,110 @@ span,
 tr,
 th {
   font-weight: 500;
-  font-size: 120%;
+}
+p {
+  margin: 5px 0 5px 0;
+}
+.leftSide .block table tr {
+  /* padding: 0 20px 0 0; */
+  /* display: grid; */
+  display: flexbox;
+}
+
+.block table th img {
+  /* padding: 0 20px 0 0; */
+  height: 32px;
+}
+
+.leftSide table th {
   padding: 0 20px 0 0;
 }
 
-.block .contact th {
-  padding: 0 20px 0 0;
-}
-
-.block .contact .left {
+table .left {
   text-align: right;
 }
 
-.block .contact .right {
+table .right {
   text-align: left;
 }
-
-.container .rightSide {
-  position: relative;
-  padding: 10px;
+.rightSide table th {
+  padding-bottom: 20px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.container .rightSide .block {
+  position: relative;
+  /* font-size: 150%; */
+  color: #0081a7;
+  margin: 2%;
+}
+.container .rightSide .block .ending {
+  margin: 2% 50% 1% 0;
+  border-bottom: 2px solid rgba(0, 129, 167, 0.2);
+}
+.aboutMe {
+  text-align: justify;
+  /* width: 70%; */
+}
+.myCardWrapper {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+.myCard {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-grow: 4;
+
+  padding: 10px;
+  max-width: 500px;
+}
+.myCard .meta {
+  position: relative;
+  display: block;
+  align-items: center;
+  background-color: #fff;
+  /* border-radius: 10px; */
+
+  z-index: 0;
+}
+.myCard .meta .tag {
+  height: 20%;
+  padding: 5px;
+  font-size: 7px;
+  font-weight: bold;
+  color: #fff;
+
+  text-align: center;
+
+  /* width: 100%; */
+}
+/* .green {
+  background-color: green;
+} */
+.myCard .meta .photo {
+  padding: 10px;
+  width: 75px;
+  height: 75px;
+}
+.myCard .details {
+  z-index: 1;
+  padding-left: 10px;
+  /* background: $color_white; */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.myCard .background {
+  position: absolute;
+  right: -10px;
+  bottom: 10px;
+  font-size: 150%;
+  color: rgba(0, 129, 167, 0.1);
+  /* background-color: yellow; */
+  transform: rotate(-90deg);
+}
