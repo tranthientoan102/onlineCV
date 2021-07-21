@@ -36,27 +36,79 @@ body {
   font-size: 11px;
   display: flex;
   align-items: center;
+  margin-right: 2rem;
 }
 
 a {
   text-decoration: underline;
 }
+.green {
+  color: rgb(64, 145, 108) !important;
+}
+.green2 {
+  color: rgb(82, 183, 136) !important;
+}
+.green3 {
+  color: rgb(116, 198, 157) !important;
+}
+.greenLight {
+  color: rgb(55, 255, 145) !important;
+}
 
-.iconGreenLight {
-  color: rgb(65, 204, 107);
+.bgWhite {
+  background-color: #fff !important;
 }
 .bgGreen {
-  background-color: rgba(49, 126, 72, 1);
+  background-color: rgb(64, 145, 108) !important;
 }
-.iconWhite {
-  color: #fff;
+.bgGreen2 {
+  background-color: rgb(82, 183, 136) !important;
 }
-.iconBlueLight {
+.bgGreen3 {
+  background-color: rgb(116, 198, 157) !important;
+}
+
+.bgGreen4 {
+  background-color: rgb(149, 213, 178) !important;
+}
+
+.bgGreen5 {
+  background-color: rgb(183, 228, 199) !important;
+}
+.bgGreen6 {
+  background-color: rgb(216, 243, 220) !important;
+}
+.white {
+  color: #fff !important;
+}
+.blueLight {
   color: rgba(0, 129, 167, 0.7);
 }
 .bgBlue {
-  background-color: rgba(0, 109, 119, 0.7);
+  background-color: #2579ad !important;
 }
+.bgBlue2 {
+  background-color: #99c1de !important;
+}
+.bgBlue3 {
+  background-color: #ade8f4 !important;
+}
+.bgBlue4 {
+  background-color: #caf0f8 !important;
+}
+.bgBlue5 {
+  background-color: #eefcff !important;
+}
+.blue {
+  color: #2579ad !important;
+}
+.blue2 {
+  color: #99c1de !important;
+}
+.blue3 {
+  color: #ade8f4 !important;
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -64,6 +116,13 @@ a {
 
 .border {
   border: 1px solid;
+}
+
+.pl10px {
+  padding-left: 10px;
+}
+.p5px10px {
+  padding: 5px 10px;
 }
 
 @media (min-width: 380px) {
@@ -80,17 +139,21 @@ a {
 }
 
 .grid1vs1 {
-  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 50% 50%;
 }
-
+.grid2vs1 {
+  grid-template-columns: 2fr 1fr;
+}
+.grid2vs1vs1 {
+  grid-template-columns: 2fr 1fr 1fr;
+}
 .container .leftSide {
   position: relative;
   background-color: #1b4965;
   color: #eaf4f4;
   /* font-size: 120%; */
   padding: 0;
-  margin: 5%;
+  /* margin: 5%; */
 }
 
 .container .leftSide .block {
@@ -110,11 +173,13 @@ a {
 
 .profileText .name {
   margin-top: -8%;
+  text-align: center;
+}
+.profileText p {
+  text-align: center;
 }
 
 .block .contact {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -125,7 +190,8 @@ th {
   font-weight: 500;
 }
 p {
-  margin: 5px 0 5px 0;
+  margin: 5px 10px;
+  text-align: justify;
 }
 .leftSide .block table tr {
   /* padding: 0 20px 0 0; */
@@ -139,7 +205,7 @@ p {
 }
 
 .leftSide table th {
-  padding: 0 20px 0 0;
+  padding: 0 10px 0 0;
 }
 
 table .left {
@@ -165,6 +231,7 @@ table .right {
 }
 .aboutMe {
   text-align: justify;
+  padding-left: 5px;
   /* width: 70%; */
 }
 .myCardWrapper {
@@ -180,38 +247,53 @@ table .right {
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
-  flex-grow: 4;
 
-  padding: 10px;
+  padding: 0.5rem 1rem;
   max-width: 500px;
 }
 .myCard .meta {
   position: relative;
-  display: block;
+  display: flex;
+  width: 80px;
+  flex-direction: column;
+  align-self: center;
   align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  /* background-color: rgb(24, 209, 163); */
   background-color: #fff;
   /* border-radius: 10px; */
 
-  z-index: 0;
+  /* z-index: 0; */
 }
 .myCard .meta .tag {
-  height: 20%;
-  padding: 5px;
-  font-size: 7px;
-  font-weight: bold;
+  position: relative;
+  width: 100%;
+  padding: 0.5rem;
+  margin: auto auto 0 auto;
+  font-size: 8px !important;
   color: #fff;
 
   text-align: center;
-
   /* width: 100%; */
 }
 /* .green {
   background-color: green;
 } */
 .myCard .meta .photo {
-  padding: 10px;
-  width: 75px;
-  height: 75px;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+}
+.myCard .meta .photo img {
+  align-self: center;
+}
+#logoPadding {
+  padding: 5px;
 }
 .myCard .details {
   z-index: 1;
@@ -221,12 +303,33 @@ table .right {
   display: flex;
   align-items: center;
 }
-.myCard .background {
-  position: absolute;
-  right: -10px;
-  bottom: 10px;
-  font-size: 150%;
-  color: rgba(0, 129, 167, 0.1);
-  /* background-color: yellow; */
-  transform: rotate(-90deg);
+.columnWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* justify-content: space-between; */
+
+  /* padding: 5px 10px; */
+}
+
+.rowWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  /* margin: 5px; */
+}
+.rowWrapper p {
+  padding: 0 10px;
+}
+
+#myWork .title {
+  /* flex-grow: 2; */
+  color: #fff;
+  padding: 5px 20px;
+}
+#flexGrow {
+  flex-grow: 100;
 }
