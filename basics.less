@@ -6,14 +6,16 @@
 @1: 1rem;
 @1dot5: 1.5rem;
 @1dot75: 1.75rem;
+@2: 2rem;
 @5: 5rem;
 @10: 10rem;
 
-@green: rgb(64, 145, 108);
-@green2: rgb(82, 183, 136);
+@green: rgb(83, 185, 140);
+@green2: rgb(99, 216, 161);
 @green3: rgb(173, 250, 209);
 @green4: rgb(199, 255, 219);
 @green5: rgb(231, 255, 239);
+@greenLight: rgb(55, 255, 145);
 .green {
   color: @green !important;
 }
@@ -31,7 +33,7 @@
 }
 
 .greenLight {
-  color: rgb(55, 255, 145) !important;
+  color: @greenLight !important;
 }
 
 .bgWhite {
@@ -58,6 +60,7 @@
 .white {
   color: #fff !important;
 }
+
 .blueLight {
   color: rgba(0, 129, 167, 0.7);
 }
@@ -74,7 +77,7 @@
   background-color: #b0ebf7 !important;
 }
 .bgBlue5 {
-  background-color: #c7f4ff !important;
+  background-color: #c7f4ff;
 }
 .blue {
   /* color: #2579ad !important; */
@@ -99,10 +102,25 @@
 .m(@var1, @var2) {
   margin: @var1 @var2 !important;
 }
+.m_dot25_0_dot25_dot75 {
+  margin: @dot25 0 @dot25 @dot75 !important;
+}
 .pl_dot5 {
   padding-left: @dot5 !important;
 }
 
+.pr(@var) {
+  padding-right: @var !important;
+}
+.pr_dot75 {
+  .pr(@dot75);
+}
+.pr_1 {
+  .pr(@1);
+}
+.pr_2 {
+  .pr(@2);
+}
 .pl(@var) {
   padding-left: @var !important;
 }
@@ -112,6 +130,10 @@
 .pl_1 {
   .pl(@1);
 }
+.pl_2 {
+  .pl(@2);
+}
+
 .p(@var) {
   padding: @var !important;
 }
@@ -128,8 +150,14 @@
 .p_dot25_1dot5 {
   .p(@dot25,@1dot5);
 }
+.p_dot2 {
+  .p(@dot2);
+}
 .p_dot25 {
   .p(@dot25);
+}
+.p_dot5 {
+  .p(@dot5);
 }
 .p3px5px {
   padding: 3px 5px !important;
