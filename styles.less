@@ -29,6 +29,52 @@ h4 {
 .textAlignLeft {
   text-align: left !important;
 }
+blockquote {
+  font-family: 'Homemade Apple', cursive;
+  color: #0081a7;
+	position: relative;
+	margin: 2rem;
+  
+	padding: 1rem;
+  text-align: center;
+  // background-color:#eaf4f4 ;
+}
+blockquote p{
+  font-family: 'Homemade Apple', cursive;
+	font-weight: 120;
+	font-size: 2rem;
+	// max-width: 600px;
+	line-height: 1.4;
+    text-align: center;
+}
+blockquote:before,
+blockquote:after {
+	position: absolute;
+	// color: #f1efe6;
+	font-size: 8rem;
+	width: 4rem;
+	height: 4rem;
+}
+
+blockquote:before {
+	content: '“';
+	left: 0rem;
+	top: 3rem;
+}
+
+blockquote:after {
+	content: '”';
+	right: 0rem;
+	bottom: -3rem;
+}
+
+cite {
+  font-family: "Hepta Slab", cursive;
+	line-height: 3;	
+}
+cite:before{
+  content: '- ';
+}
 
 .profileText p {
   /* font-size: 120%; */
