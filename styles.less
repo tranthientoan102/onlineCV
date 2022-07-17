@@ -3,16 +3,16 @@
 * {
   margin: 0;
   padding: 0;
-  line-height: 120%;
+  line-height: 110%;
   /* -webkit-box-sizing: border-box;
   box-sizing: border-box; */
 }
 
 h1,
 h2 {
-  font-size: 150%;
+  font-size: 300%;
   font-weight: 900;
-  padding-top: @dot25;
+  padding: @dot5 0;
 }
 
 h3 {
@@ -33,7 +33,7 @@ blockquote {
   font-family: 'Homemade Apple', cursive;
   color: #0081a7;
 	position: relative;
-	margin: 2rem;
+	margin: 1rem;
   
 	padding: 1rem;
   text-align: center;
@@ -44,14 +44,14 @@ blockquote p{
 	font-weight: 120;
 	font-size: 2rem;
 	// max-width: 600px;
-	line-height: 1.4;
+	// line-height: 1.4;
     text-align: center;
 }
 blockquote:before,
 blockquote:after {
 	position: absolute;
 	// color: #f1efe6;
-	font-size: 8rem;
+	font-size: 4rem;
 	width: 4rem;
 	height: 4rem;
 }
@@ -161,9 +161,15 @@ a.small {
   padding: 0 @dot25;
 }
 
-.container .leftSide .block .ending {
-  margin: 5% 30%;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+
+.ending {
+  margin: @1 30%;
+  border-bottom: @dot2 solid rgba(255, 255, 255, 0.2);
+}
+.rightSide .ending {
+  // margin: 2% 50% 1% 0;
+  // .ending;
+  border-bottom: @dot2 solid rgba(0, 129, 167, 0.2);
 }
 
 .profileText .name {
@@ -223,11 +229,9 @@ table .right {
   width: 100% !important;
   .pl(@1);
 }
-.container .rightSide .block .ending {
-  // margin: 2% 50% 1% 0;
-  margin: @dot25 50% @1 0;
-  border-bottom: @dot2 solid rgba(0, 129, 167, 0.2);
-}
+
+
+
 .aboutMe {
   text-align: justify;
   // padding-left: 5px;
@@ -347,12 +351,12 @@ table .right {
 .techTask {
   .p_dot25_dot5;
   .columnWrapper;
-  .bgBlue3;
+  // .bgBlue3;
   .flexGrow;
   width: 50%;
 }
 .techTool {
-  .bgBlue4;
+  // .bgBlue4;
   .p_dot25_dot5;
   .flexGrow;
   width: 20%;
@@ -389,6 +393,7 @@ table .right {
   .skewTag;
   .bgGreen;
 }
+
 
 .verticalAlignBaseline {
   vertical-align: baseline;
